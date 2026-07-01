@@ -38,9 +38,9 @@ body{font-family:'Jost',sans-serif;background:var(--ivory);color:var(--text);ove
 .welcome-panel::before{content:'✦';position:absolute;top:11px;left:16px;font-size:15px;color:var(--yellow-deep);opacity:0.75;}
 .welcome-panel::after{content:'✦';position:absolute;bottom:11px;right:16px;font-size:15px;color:var(--sky-mid);opacity:0.65;}
 .welcome-line{font-family:'Cormorant Garamond',serif;display:block;line-height:1.5;margin:4px 0;}
-.welcome-line.pl{font-size:clamp(17px,2.8vw,24px);font-style:italic;font-weight:500;color:var(--gold-dark);}
-.welcome-line.uk{font-size:clamp(16px,2.6vw,22px);font-style:italic;font-weight:400;color:var(--sky);}
-.welcome-line.en{font-size:clamp(11px,1.8vw,14px);font-style:normal;font-weight:400;color:var(--text-muted);letter-spacing:0.18em;text-transform:uppercase;margin-top:10px;padding-top:10px;border-top:1px solid rgba(43,114,184,0.14);}
+.welcome-line.pl{font-size:clamp(20px,3.2vw,28px);font-style:italic;font-weight:500;color:var(--gold-dark);}
+.welcome-line.uk{font-size:clamp(19px,3vw,26px);font-style:italic;font-weight:400;color:var(--sky);}
+.welcome-line.en{font-size:clamp(12px,1.8vw,14px);font-style:normal;font-weight:400;color:var(--text-muted);letter-spacing:0.15em;text-transform:uppercase;margin-top:10px;padding-top:10px;border-top:1px solid rgba(43,114,184,0.14);}
 .welcome-sep{display:flex;align-items:center;gap:10px;margin:7px 0 3px;}
 .welcome-sep-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(232,184,0,0.4),transparent);}
 .welcome-sep-dot{color:var(--yellow-deep);font-size:9px;opacity:0.75;}
@@ -49,11 +49,11 @@ body{font-family:'Jost',sans-serif;background:var(--ivory);color:var(--text);ove
 @keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
 .nav-strip{position:sticky;top:0;z-index:100;background:rgba(254,252,240,0.97);backdrop-filter:blur(12px);border-bottom:2px solid var(--yellow);display:flex;justify-content:center;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 4px;}
 .nav-strip::-webkit-scrollbar{display:none;}
-.nav-btn{font-family:'Jost',sans-serif;font-weight:500;color:var(--text-muted);background:none;border:none;padding:12px 20px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;transition:color 0.2s,border-color 0.2s;flex-shrink:0;min-height:62px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-align:center;}
-.nav-btn.active,.nav-btn:hover{color:var(--sky);border-bottom-color:var(--sky);}
-.nav-pl{font-size:14px;font-weight:600;letter-spacing:0.03em;line-height:1.4;color:inherit;}
-.nav-uk{font-size:14px;font-weight:600;letter-spacing:0.02em;line-height:1.4;color:inherit;}
-.nav-en{font-size:14px;font-weight:600;letter-spacing:0.05em;line-height:1.4;color:inherit;}
+.nav-btn{font-family:'Jost',sans-serif;font-weight:500;color:var(--text-muted);background:none;border:none;padding:12px 20px;cursor:pointer;border-bottom:5px solid transparent;margin-bottom:-2px;transition:color 0.2s,border-color 0.2s;flex-shrink:0;min-height:62px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-align:center;}
+.nav-btn.active,.nav-btn:hover{color:var(--sky);border-bottom-color:var(--sky);background:rgba(43,114,184,0.06);border-radius:4px 4px 0 0;}
+.nav-pl{font-size:17px;font-weight:700;letter-spacing:0.02em;line-height:1.4;color:inherit;}
+.nav-uk{font-size:17px;font-weight:700;letter-spacing:0.01em;line-height:1.4;color:inherit;}
+.nav-en{font-size:17px;font-weight:700;letter-spacing:0.04em;line-height:1.4;color:inherit;}
 .section{display:none;min-height:80vh;padding:72px 20px 60px;max-width:920px;margin:0 auto;animation:fadeIn 0.4s ease;}
 .section.active{display:block;}
 @keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
@@ -142,15 +142,15 @@ footer .footer-date{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:
   .hero-divider{margin:14px auto 14px;}
   /* Welcome panel: constrained so it CANNOT overlap photo-br (150px wide, bottom-right) */
   .welcome-panel{padding:16px 18px;border-radius:14px;max-width:calc(100vw - 56px);margin:0 auto;}
-  .welcome-line.pl{font-size:16px;}
-  .welcome-line.uk{font-size:15px;}
+  .welcome-line.pl{font-size:19px;}
+  .welcome-line.uk{font-size:18px;}
   .welcome-line.en{font-size:12px;}
 
   /* ── Nav: bigger text, easy to tap ── */
-  .nav-btn{padding:10px 12px;min-height:60px;}
-  .nav-pl{font-size:13px;}
-  .nav-uk{font-size:13px;}
-  .nav-en{font-size:13px;}
+  .nav-btn{padding:10px 12px;min-height:64px;}
+  .nav-pl{font-size:15px;}
+  .nav-uk{font-size:15px;}
+  .nav-en{font-size:15px;}
 
   /* ── Sections ── */
   .section{padding:44px 16px 56px;}
@@ -167,8 +167,8 @@ footer .footer-date{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:
   .upload-area{padding:40px 20px;}
   .upload-title{font-size:24px;}
   .upload-sub{font-size:14px;}
-  .gphotos-title-pl,.gphotos-title-uk{font-size:20px;}
-  .gphotos-title-en{font-size:13px;}
+  .gphotos-title-pl,.gphotos-title-uk{font-size:24px;}
+  .gphotos-title-en{font-size:16px;}
   .gphotos-note{font-size:13px;padding:14px 16px;}
 }
 @media(hover:none){.table-card:hover{transform:none;}}
@@ -176,8 +176,8 @@ footer .footer-date{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:
 .gphotos-btn{display:block;background:var(--white);border:2px solid var(--sky-light);border-radius:24px;padding:36px 28px 28px;text-decoration:none;color:var(--text);transition:border-color 0.2s,box-shadow 0.2s,transform 0.15s;margin-bottom:20px;position:relative;overflow:hidden;}
 .gphotos-btn::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--sky),var(--yellow),var(--sky));}
 .gphotos-btn:hover{border-color:var(--sky);box-shadow:0 6px 24px rgba(43,114,184,0.15);transform:translateY(-2px);}
-.gphotos-title-pl{display:block;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--sky-dark);margin-bottom:6px;line-height:1.3;}
-.gphotos-title-uk{display:block;font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--sky);margin-bottom:6px;line-height:1.3;}
+.gphotos-title-pl{display:block;font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:var(--sky-dark);margin-bottom:6px;line-height:1.3;}
+.gphotos-title-uk{display:block;font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--sky);margin-bottom:6px;line-height:1.3;}
 .gphotos-title-en{display:block;font-family:'Jost',sans-serif;font-size:13px;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);line-height:1.3;}
 .gphotos-note{font-family:'Jost',sans-serif;font-size:12px;font-weight:300;color:var(--text-muted);line-height:1.7;padding:16px 20px;background:var(--sky-pale);border-radius:14px;border:1px solid var(--border-b);}
 </style>
@@ -241,7 +241,7 @@ footer .footer-date{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:
   <div class="schedule-list" id="schedule-list" style="display:none;"></div>
 </section>
 <section class="section" id="sec-photos">
-  <p class="section-eyebrow">✦ Wspomnienia · Спогади · Share the Moments ✦</p>
+  <p class="section-eyebrow" style="font-size:14px;letter-spacing:0.18em;">✦ Wspomnienia · Спогади · Share the Moments ✦</p>
   <h2 class="section-title" style="line-height:1.25;">
     <span style="display:block;">Wasze Zdjęcia</span>
     <span style="display:block;font-size:0.72em;opacity:0.82;margin-top:4px;">Ваші Фото</span>
@@ -271,16 +271,16 @@ footer .footer-date{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:
 <footer><div class="footer-names">Michael &amp; Julia</div><div class="footer-date">July 5, 2026 · With all our love</div></footer>
 <script>
 const guests=[
-  {name:"Maria Nasarzewska",table:1},{name:"Jacek Nasarzewski",table:1},{name:"Grażyna Wysocka",table:1},{name:"Jacek Wysocki",table:1},{name:"Mariusz Bednarski",table:1},{name:"Hanna Bednarska",table:1},{name:"Regina Gawryś",table:1},{name:"Dariusz Nasarzewski",table:1},{name:"Aneta Raczkowska",table:1},{name:"Waldek Raczkowski",table:1},{name:"Malgorzata Sławińska",table:1},
-  {name:"Ульяна Данильців",table:2},{name:"Humberto Flórez Enríquez",table:2},{name:"Андрій Данильців",table:2},{name:"Марія Данильців",table:2},{name:"Войцицька Наталія",table:2},{name:"Войцицький Віктор",table:2},{name:"Ніколь Данильців",table:2},{name:"Захар Валовін",table:2},{name:"Uliana Morikin",table:2},{name:"Siméon Dorninger",table:2},{name:"Оксана Данильців",table:2},{name:"Жанна Данильців",table:2},
-  {name:"Alla Luchko",table:3},{name:"Grzegorz Peters",table:3},{name:"Vika Dub",table:3},{name:"Sandra Kruszka",table:3},{name:"Rajmund Andruszewski",table:3},{name:"Anastasia Yeremtsova",table:3},{name:"Roman Kara",table:3},{name:"Natalia Nadolska",table:3},{name:"Viktor Nadolski",table:3},{name:"Анастасія Червінко",table:3},
-  {name:"Karolina Horta",table:4},{name:"Ricardo Horta",table:4},{name:"Anna Górska",table:4},{name:"Ewa Kowalczyk",table:4},{name:"Tomasz Kowalczyk",table:4},{name:"Małgorzata Gawryś-Kałczyńska",table:4},{name:"Radek Kałczyński",table:4},{name:"Hanna Makowska",table:4},{name:"Krzysztof Makowski",table:4},{name:"Zbigniew Łukasiński",table:4},{name:"Mariola Łukasińska",table:4},
-  {name:"Derek Di Iulio",table:5},{name:"Kasia Di Iulio",table:5},{name:"Marta Czarnowska",table:5},{name:"Marcin Czarnowski",table:5},{name:"Magdalena Drączkowski",table:5},{name:"Łukasz Lipecki",table:5},{name:"Joanna Raniszewska",table:5},{name:"Małgorzata Lipecka",table:5},{name:"Bozhena Faryna",table:5},{name:"Włodzimierz Hutnikiweicz",table:5},
-  {name:"Angelina Krajewska",table:6},{name:"Szymon Wójtowicz",table:6},{name:"Denissa Nowicka",table:6},{name:"Stanisław Półjanowski",table:6},{name:"Piotr Chudanski",table:6},{name:"Julia Chudanska",table:6},{name:"Taylor Ross",table:6},{name:"Maciek Nasarzewski",table:6},{name:"Weronika Górska",table:6},{name:"Nikolas Bruski",table:6},{name:"Victoria Raczkowska",table:6},
-  {name:"Alicja Castillo",table:7},{name:"Nestor Castillo",table:7},{name:"Grażyna Nasarzewska",table:7},{name:"Wojtek Nasarzewski",table:7},{name:"Wiesława Murawska",table:7},{name:"Jerzy Murawski",table:7},{name:"Marzena Łapacz",table:7},{name:"Krzysztof Łapacz",table:7},{name:"Małgorzata Późniak",table:7},{name:"Maciej Późniak",table:7},{name:"Beata Szczepankiewicz",table:7},
-  {name:"Maja Lipecka",table:8},{name:"Maja Kowalczyk",table:8},{name:"Natalia Kowalczyk",table:8},{name:"Karol Drączkowski",table:8},{name:"Tomek Drączkowski",table:8},{name:"Kuba Drączkowski",table:8},{name:"Adam Czarnowski",table:8},{name:"Lena Krystkiewicz",table:8},{name:"Julia Czarnowska",table:8},{name:"Hubert Górski",table:8},{name:"Zosia Rosińska",table:8},
+  {name:"Alla Luchko",table:1},{name:"Grzegorz Peters",table:1},{name:"Vika Dub",table:1},{name:"Sandra Kruszka",table:1},{name:"Rajmund Andruszewski",table:1},{name:"Anastasia Yeremtsova",table:1},{name:"Roman Kara",table:1},{name:"Natalia Nadolska",table:1},{name:"Wiktor Nadolski",table:1},{name:"Анастасія Червінко",table:1},
+  {name:"Angelina Krajewska",table:2},{name:"Szymon Wójtowicz",table:2},{name:"Denissa Nowicka",table:2},{name:"Stanisław Półjanowski",table:2},{name:"Piotr Chudanski",table:2},{name:"Julia Chudanska",table:2},{name:"Taylor Ross",table:2},{name:"Weronika Górska",table:2},{name:"Nikolas Bruski",table:2},{name:"Victoria Raczkowska",table:2},
+  {name:"Karolina Horta",table:3},{name:"Ricardo Horta",table:3},{name:"Anna Górska",table:3},{name:"Ewa Kowalczyk",table:3},{name:"Tomasz Kowalczyk",table:3},{name:"Małgorzata Gawryś-Kałczyńska",table:3},{name:"Radosław Kałczyński",table:3},{name:"Hanna Makowska",table:3},{name:"Krzysztof Makowski",table:3},{name:"Zbigniew Łukasiński",table:3},{name:"Mariola Łukasińska",table:3},
+  {name:"Ульяна Данильців",table:4},{name:"Humberto Flórez Enríquez",table:4},{name:"Андрій Данильців",table:4},{name:"Марія Данильців",table:4},{name:"Войцицька Наталія",table:4},{name:"Войцицький Віктор",table:4},{name:"Ніколь Данильців",table:4},{name:"Захар Валовін",table:4},{name:"Uliana Morikin",table:4},{name:"Siméon Dorninger",table:4},{name:"Оксана Данильців",table:4},{name:"Жанна Данильців",table:4},
+  {name:"Maria Nasarzewska",table:5},{name:"Jacek Nasarzewski",table:5},{name:"Grażyna Wysocka",table:5},{name:"Jacek Wysocki",table:5},{name:"Mariusz Bednarski",table:5},{name:"Hanna Bednarska",table:5},{name:"Regina Gawryś",table:5},{name:"Dariusz Nasarzewski",table:5},{name:"Aneta Raczkowska",table:5},{name:"Waldek Raczkowski",table:5},{name:"Malgorzata Sławińska",table:5},
+  {name:"Derek Di Iulio",table:6},{name:"Kasia Di Iulio",table:6},{name:"Marta Czarnowska",table:6},{name:"Marcin Czarnowski",table:6},{name:"Magdalena Drączkowski",table:6},{name:"Łukasz Lipecki",table:6},{name:"Joanna Raniszewska",table:6},{name:"Małgorzata Lipecka",table:6},{name:"Bozhena Faryna",table:6},{name:"Włodzimierz Hutnikiweicz",table:6},
+  {name:"Mikołaj Sławiński",table:7},{name:"Wiktoria Sieńko",table:7},{name:"Agata Sławińska",table:7},{name:"Przemyslaw Ratajczyk",table:7},{name:"Janusz Makowski",table:7},{name:"Magdalena Makowska",table:7},{name:"Mariusz Bednarski",table:7},{name:"Magda Bednarska",table:7},{name:"Wiktor Łukasiński",table:7},{name:"Maciek Nasarzewski",table:7},
+  {name:"Alicja Castillo",table:8},{name:"Nestor Castillo",table:8},{name:"Grażyna Nasarzewska",table:8},{name:"Wojciech Nasarzewski",table:8},{name:"Wiesława Murawska",table:8},{name:"Jerzy Murawski",table:8},{name:"Marzena Łapacz",table:8},{name:"Krzysztof Łapacz",table:8},{name:"Małgorzata Późniak",table:8},{name:"Maciej Późniak",table:8},{name:"Beata Szczepankiewicz",table:8},
   {name:"Evelyn Horta",table:9},{name:"Victoria Di Iulio",table:9},{name:"Olivia Di Iulio",table:9},{name:"Микита Данильців",table:9},{name:"Матвій Данильців",table:9},{name:"Богдана Данильців",table:9},{name:"Gabrysia Gawryś-Kałczyńska",table:9},{name:"Stasio Gawryś-Kałczyński",table:9},{name:"Tymek Gawryś-Kałczyńska",table:9},{name:"Melania Faryna-Hutnikiewicz",table:9},
-  {name:"Mikołaj Sławiński",table:10},{name:"Wiktoria Sieńko",table:10},{name:"Agata Sławińska",table:10},{name:"Przemyslaw Ratajczyk",table:10},{name:"Janusz Makowski",table:10},{name:"Magdalena Makowska",table:10},{name:"Mariusz Bednarski",table:10},{name:"Magda Bednarska",table:10},{name:"Viktor Łukasiński",table:10}
+  {name:"Maja Lipecka",table:10},{name:"Maja Kowalczyk",table:10},{name:"Natalia Kowalczyk",table:10},{name:"Karol Drączkowski",table:10},{name:"Tomek Drączkowski",table:10},{name:"Kuba Drączkowski",table:10},{name:"Adam Czarnowski",table:10},{name:"Lena Krystkiewicz",table:10},{name:"Julia Czarnowska",table:10},{name:"Hubert Górski",table:10},{name:"Zosia Rosińska",table:10}
 ];
 function normalize(s){return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");}
 let st;
